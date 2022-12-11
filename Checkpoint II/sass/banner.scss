@@ -1,0 +1,56 @@
+@use 'variables-and-mixins';
+
+.banner {
+  background-image: url('../img/banner.jpg');
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  a {
+    display: block;
+    width: 100%;
+    background: transparentize(variables-and-mixins.$secondary-color, $amount: .1);
+    border-radius: 5px;
+    padding: 21px 45px;
+    max-width: 225px;
+    border: 2px solid variables-and-mixins.$secondary-color;
+    font-weight: bold;
+    font-family: variables-and-mixins.$play;
+    color: variables-and-mixins.$light;
+    font-size: 1.5rem ;
+    margin-bottom: 28px;
+    transition: .4s;
+
+    &:hover {
+      background: variables-and-mixins.$secondary-color;
+      color: variables-and-mixins.$light;
+    }
+  }
+  &-content {
+    h1 {
+      background: rgba($color: #000000, $alpha: 8.0);
+      color: variables-and-mixins.$light;
+      font-weight: 400;
+      font-family: variables-and-mixins.$play;
+      padding: 10px 24px;
+      border-radius: 5px;
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.divisor {
+  width: 100%;
+  height: 80px;
+  background: variables-and-mixins.$dark-color;
+}

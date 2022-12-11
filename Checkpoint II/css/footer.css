@@ -1,0 +1,59 @@
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+.footer {
+  background: #000;
+  margin-top: 10%;
+  width: 100%;
+  border-top: 3px solid #FFF;
+  text-align: center;
+}
+.footer p {
+  color: #FFF;
+  font-family: "Outfit", sans-serif;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.footer .footer-content {
+  justify-content: center;
+}
+.footer .contribuitors {
+  margin: 30px 0;
+  color: #FFF;
+}
+.footer .contribuitors h3 {
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.footer .contribuitors li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+.footer .contribuitors li a:last-of-type {
+  padding: 10px;
+  border-radius: 15px;
+}
+.footer .contribuitors li a:last-of-type:hover {
+  background: #540505;
+}
+.footer .contribuitors li a {
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.footer .contribuitors li a:hover {
+  color: #FFF;
+}
+.footer .contribuitors li a img:first-child {
+  width: 20px;
+}
+
+/*# sourceMappingURL=footer.css.map */

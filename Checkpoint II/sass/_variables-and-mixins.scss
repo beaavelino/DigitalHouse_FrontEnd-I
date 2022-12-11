@@ -1,0 +1,48 @@
+$play: 'Play', sans-serif;
+$outfit: 'Outfit', sans-serif;
+$primary-color: #E51B3E;
+$secondary-color: #127ADA;
+$linear-ida: #260414;
+$light: #FFF;
+$dark-color: #000;
+$bg-login: #320414;
+$linear-fim: #4A0928;
+$linear-card-ida: #BFBDAF;
+$linear-card-fim: #40299C;
+
+
+@mixin animacao {
+  $count: 6;
+
+  @for $inicio from 1 through $count {
+    &-#{$inicio} {
+      animation: flip .7s ease-out forwards;
+      animation-delay: #{$inicio + 1}s;
+      flex-basis: 220px;
+    }
+  }
+}
+
+@mixin media($size) {
+  @if $size == 600px {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @else if $size == 320px{
+    @media only screen and (max-width: 320px) {
+      @content;
+    } 
+  }
+  
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}

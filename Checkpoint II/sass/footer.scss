@@ -1,0 +1,59 @@
+@use 'variables-and-mixins';
+
+.footer {
+  background: variables-and-mixins.$dark-color;
+  margin-top: 10%;
+  width: 100%;
+  border-top: 3px solid variables-and-mixins.$light;
+  text-align: center;
+
+  p {
+    color: variables-and-mixins.$light;
+    font-family: variables-and-mixins.$outfit;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    justify-content: center;
+  }
+
+  .contribuitors {
+    margin: 30px 0;
+    color: variables-and-mixins.$light;
+
+    h3 {
+      font-family: variables-and-mixins.$outfit;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+  
+  .contribuitors li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
+    a:last-of-type {
+      padding: 10px;
+      border-radius: 15px;
+      
+      &:hover {
+        background: variables-and-mixins.$secondary-color;
+      }
+    }
+    
+    a {
+      font-family: variables-and-mixins.$outfit;
+      color: variables-and-mixins.$secondary-color;
+      transition: .3s;
+      
+      &:hover {
+        color: variables-and-mixins.$light;
+      }
+      img:first-child {
+        width: 20px;
+      }
+    }
+  }
+}

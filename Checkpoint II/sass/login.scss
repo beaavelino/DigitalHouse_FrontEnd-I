@@ -1,0 +1,98 @@
+@use 'variables-and-mixins';
+
+.body {
+  background: variables-and-mixins.$dark-color;
+}
+.container-login {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/login-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: transparentize($color: #000000, $amount: .6);
+    backdrop-filter: blur(5px);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 455px;
+    background: variables-and-mixins.$bg-login;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid variables-and-mixins.$light;
+    border-radius: 12px;
+    padding: 30px;
+
+    .img-logo {
+      margin:  0 auto;
+    }
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      cursor: pointer;
+    }
+
+    form {
+      label,input {
+        display: block;
+        width: 100%;
+      }
+
+      label {
+        color: variables-and-mixins.$light;
+        font-family: variables-and-mixins.$outfit;
+        padding: 5px 0;
+
+        &:last-of-type {
+          margin-top: 20px;
+        }
+      }
+
+      input {
+        height: 60px;
+        border-radius: 12px;
+        padding: 10px;
+        
+        &::placeholder {
+          font-size: 1.2rem;
+        }
+
+        &:last-of-type {
+          margin-bottom: 60px;
+        }
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        border: none;
+        background: variables-and-mixins.$secondary-color;
+        text-align: center;
+        color: variables-and-mixins.$light;
+        font-family: variables-and-mixins.$outfit;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        padding: 18px 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

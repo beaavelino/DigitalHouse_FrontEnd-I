@@ -1,0 +1,55 @@
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+.header {
+  background: #000;
+  border-bottom: 3px solid #FFF;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
+.header-nav .menu-mobile {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .header-nav .menu-mobile {
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+  }
+}
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 600px) {
+  .header-nav-list {
+    display: none;
+  }
+}
+.header-nav-list li a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  color: #FFF;
+  transition: 0.3s;
+}
+.header-nav-list li a:hover {
+  color: #7b3131;
+}
+.header-nav-list .red {
+  color: #E51B3E;
+}
+.header-nav-list li {
+  margin: 0 12px;
+}
+
+/*# sourceMappingURL=header.css.map */

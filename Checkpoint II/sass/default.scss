@@ -1,0 +1,31 @@
+@use 'variables-and-mixins';
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 15px;
+  @include variables-and-mixins.media(600px) {
+    font-size: 12px;
+  }
+}
+
+.red {
+  color: variables-and-mixins.$primary-color;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body {
+  background: linear-gradient(180deg, variables-and-mixins.$linear-ida, variables-and-mixins.$linear-fim);
+}
